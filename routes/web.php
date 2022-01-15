@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginWithGoogleController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +18,9 @@ use App\Http\Controllers\LoginWithGoogleController;
 Route::get('/', function () {
     return view('guest-homepage');
 });
+
+Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
+Route::delete('/admin/user/{id}', [UserController::class, 'delete'])->name('user.delete');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
