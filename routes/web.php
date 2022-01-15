@@ -14,7 +14,7 @@ use App\Http\Controllers\LoginWithGoogleController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('guest-homepage');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
