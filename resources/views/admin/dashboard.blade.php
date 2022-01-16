@@ -5,12 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Dashboard</title>
+    <title>PF Admin</title>
 
     <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
 </head>
 
-<body>
+<body>    
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -39,6 +39,8 @@
                 </li>
             </ul>
         </nav>
+
+
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
@@ -58,7 +60,7 @@
                                 <img src="{{asset('images/dashboard/circle.svg')}}" class="card-img-absolute" alt="circle-image" />
                                 <h4 class="font-weight-normal mb-3">Number of Products <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">45,6334</h2>
+                                <h2 class="mb-5">{{count($products)}}</h2>
                             </div>
                         </div>
                     </div>
@@ -68,7 +70,7 @@
                                 <img src="{{asset('images/dashboard/circle.svg')}}" class="card-img-absolute" alt="circle-image" />
                                 <h4 class="font-weight-normal mb-3">Number of Users <i class="mdi mdi-diamond mdi-24px float-right"></i>
                                 </h4>
-                                <h2 class="mb-5">95,5741</h2>
+                                <h2 class="mb-5">{{count($users)}}</h2>
                             </div>
                         </div>
                     </div>
@@ -128,105 +130,37 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th> User </th>
-                                        <th> First name </th>
-                                        <th> Progress </th>
-                                        <th> Amount </th>
-                                        <th> Deadline </th>
+                                        <th> ID </th>
+                                        <th> Image </th>
+                                        <th> Name </th>
+                                        <th> Price </th>
+                                        <th> Type </th>
+                                        <th>Stock</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                                        </td>
-                                        <td> Herman Beck </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $ 77.99 </td>
-                                        <td> May 15, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-2.png" alt="image" />
-                                        </td>
-                                        <td> Messsy Adam </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $245.30 </td>
-                                        <td> July 1, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-3.png" alt="image" />
-                                        </td>
-                                        <td> John Richards </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $138.00 </td>
-                                        <td> Apr 12, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-4.png" alt="image" />
-                                        </td>
-                                        <td> Peter Meggik </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $ 77.99 </td>
-                                        <td> May 15, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
-                                        </td>
-                                        <td> Edward </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $ 160.25 </td>
-                                        <td> May 03, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-2.png" alt="image" />
-                                        </td>
-                                        <td> John Doe </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $ 123.21 </td>
-                                        <td> April 05, 2015 </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            <img src="../../assets/images/faces-clipart/pic-3.png" alt="image" />
-                                        </td>
-                                        <td> Henry Tom </td>
-                                        <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td> $ 150.00 </td>
-                                        <td> June 16, 2015 </td>
-                                    </tr>
+                                    @foreach ($products as $product)
+                                        <tr>
+                                            <td>{{$product->product_id}}</td>
+                                            <td><img src="/storage/images/{{$product->product_image}}"></td>
+                                            <td>{{$product->product_name}}</td>
+                                            <td>{{$product->product_price}}</td>
+                                            <td>{{$product->product_type}}</td>
+                                            <td>{{$product->product_stock}}</td>
+                                            <td>{{$product->product_description}}</td>
+                                            <td>
+                                                <a href="" class="btn btn-lg btn-outline-primary">Edit</a>
+                                                <form action="{{route('products.destroy', $product->product_id)}}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-md btn-outline-danger">Delete</button>
+                                                </form>
+                                                
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

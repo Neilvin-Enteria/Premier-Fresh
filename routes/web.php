@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginWithGoogleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 // Products
 Route::resource('products', ProductController::class);
 
-Route::get('/admin', [ProductController::class, 'admin']);
-Route::get('/', [ProductController::class, 'index']);  
+Route::get('/adminAdd', [ProductController::class, 'admin']);
+// Route::get('/', [ProductController::class, 'index']);  
 Route::get('cart', [ProductController::class, 'cart'])->name('cart');
 Route::get('add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
 Route::patch('update-cart', [ProductController::class, 'updateCart'])->name('update.cart');
