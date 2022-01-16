@@ -166,62 +166,24 @@
             <!-- Products Display -->
             <div class="container my-5 text-center">
             <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <img src="images/Assets/Pork/porkSisig.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">Pork Sisig</h6>
-                            <p class="text-secondary">Promo Buy 5 + 1</p>
-                            <div class="row mb-1">
-                                <div class="col text-dark">
-                                    <p class="card-text mb-0">&#8369; 165.00</p>
-                                </div> 	
-                            </div>			
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="images/Assets/Bacon/premium_bacon.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">American Bacon</h6>
-                            <p class="text-secondary">New Premium</p>
-                            <div class="row mb-1">
-                                <div class="col text-dark">
-                                    <p class="card-text mb-0">&#8369; 270.00</p>
-                                </div> 	
-                            </div>			
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="images/Assets/Bacon/bacon_honeycurd.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">Bacon Honeycured</h6>
-                            <p class="text-secondary">Promo Buy 5 + 1</p>
-                            <div class="row mb-1">
-                                <div class="col text-dark">
-                                    <p class="card-text mb-0">&#8369; 260.00.00</p>
-                                </div> 	
-                            </div>			
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="images/Assets/Pork/porkTapa.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h6 class="card-title mb-1">Pork Tapa</h6>
-                            <p class="text-secondary">BBQ</p>
-                            <div class="row mb-1">
-                                <div class="col text-dark">
-                                    <p class="card-text mb-0">&#8369; 150.00</p>
-                                </div> 	
-                            </div>			
-                        </div>
-                    </div>
-                </div>
+                @foreach ($products as $product)
+				<div class="col">
+					<div class="card">
+						<img src="/storage/images/{{$product->product_image}}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h6 class="card-title mb-1">{{$product->product_name}}</h6>
+							<p class="text-secondary">{{$product->product_description}}</p>
+							<div class="row mb-1">
+								<div class="col text-dark">
+									<p class="card-text mb-0">&#8369; {{$product->product_price}}</p>
+								</div> 	
+							</div>
+                              <a class="btn btn-outline-light btn-cart text-light" style="background-color: #000000; width: 12rem" href="{{ route('add.to.cart', $product->product_id) }}">ADD TO CART</a>			
+						</div>
+					</div>
+				</div>
+			@endforeach
+
             </div>
             <!-- End of Featured Products -->
     
@@ -420,7 +382,7 @@
         <!-- End of Footer -->
     
         <!-- Back to Top -->
-        <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+        <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true" style="opacity: 0.7;"></a>
         <!-- Back to Top -->
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

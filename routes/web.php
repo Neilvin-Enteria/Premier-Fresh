@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginWithGoogleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +18,20 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('guest-homepage');
+    $products = DB::table('products')
+        ->whereIn('product_id', ['3', '4', '5', '6'])
+        ->get();
+    return view('guest-homepage', compact('products'));
 });
 
 Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
 Route::delete('/admin/user/{id}', [UserController::class, 'delete'])->name('user.delete');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    $products = DB::table('products')
+    ->whereIn('product_id', ['3', '4', '5', '6'])
+    ->get();
+    return view('dashboard', compact('products'));
 })->name('dashboard');
 
 // Products
