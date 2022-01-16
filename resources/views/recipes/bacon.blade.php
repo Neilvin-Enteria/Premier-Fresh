@@ -38,11 +38,11 @@
                                 PRODUCTS
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">BACON</a>
-                                  <a class="dropdown-item" href="#">HAM</a>
-                                  <a class="dropdown-item" href="#">SAUSAGES</a>
+                                <a class="dropdown-item" href="/bacon">BACON</a>
+                                  <a class="dropdown-item" href="/ham">HAM</a>
+                                  <a class="dropdown-item" href="/sausages">SAUSAGES</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">OTHER PRODUCTS</a>
+                                  <a class="dropdown-item" href="/other-products">OTHER PRODUCTS</a>
                             </div>
                         </li>
                           <li class="nav-item border-right">
