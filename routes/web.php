@@ -18,15 +18,13 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
+// Dashboards / Homepages
 Route::get('/', function () {
     $products = DB::table('products')
         ->whereIn('product_id', ['3', '4', '5', '6'])
         ->get();
     return view('guest-homepage', compact('products'));
 });
-
-Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
-Route::delete('/admin/user/{id}', [UserController::class, 'delete'])->name('user.delete');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $products = DB::table('products')
@@ -35,6 +33,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard', compact('products'));
 })->name('dashboard');
 
+
+// Admin Dashboard
+Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
+Route::delete('/admin/user/{id}', [UserController::class, 'delete'])->name('user.delete');
+
+
+// Products Pages
 Route::middleware(['auth:sanctum', 'verified'])->get('/bacon', function () {
     $bacons = DB::table('products')
     ->whereIn('product_type', ['Bacon'])
@@ -63,6 +68,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/other-products', function
     return view('recipes.other-products', compact('others'));
 })->name('other-products');
 
+
 //Recipe
 Route::get('/recipe/bacon', function(){
     return view('recipe.bacon-recipe');
@@ -80,15 +86,19 @@ Route::get('/recipe/sausages', function(){
     return view('recipe.sausage-recipe');
 });
 
-// Products
+// Products Resource
 Route::resource('products', ProductController::class);
 
+// Add Product
 Route::get('/adminAdd', [ProductController::class, 'admin']);
-// Route::get('/', [ProductController::class, 'index']);  
+
+// Cart Routes
 Route::get('cart', [ProductController::class, 'cart'])->name('cart');
 Route::get('add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
 Route::patch('update-cart', [ProductController::class, 'updateCart'])->name('update.cart');
 Route::delete('remove-from-cart', [ProductController::class, 'remove'])->name('remove.from.cart');
 
+
+// Google Login
 Route::get('authorized/google', [LoginWithGoogleController::class, 'redirectToGoogle']);
 Route::get('authorized/google/callback', [LoginWithGoogleController::class, 'handleGoogleCallback']);

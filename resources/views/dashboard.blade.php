@@ -45,9 +45,18 @@
                                   <a class="dropdown-item" href="/other-products">OTHER PRODUCTS</a>
                             </div>
                         </li>
-                          <li class="nav-item border-right">
-                            <a class="nav-link px-3 mx-2 recipes" href="#">RECIPES</a>
-                          </li>
+                        <li class="nav-item dropdown border-right">
+                            <a class="nav-link px-3 mx-2 dropdown-toggle" href="recipes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                RECIPES
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/recipe/bacon">BACON</a>
+                                  <a class="dropdown-item" href="/recipe/ham">HAM</a>
+                                  <a class="dropdown-item" href="/recipe/sausages">SAUSAGES</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/recipe/other-products">OTHER PRODUCTS</a>
+                            </div>
+                        </li>
                           <li class="nav-item border-right">
                             <a class="nav-link px-3 mx-2 about" href="#">ABOUT</a>
                          </li>
@@ -70,7 +79,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                
                                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                                    onclick="event.preventDefault();
                                                     this.closest('form').submit();">
@@ -96,7 +104,7 @@
                     <li data-target="#carousel-example" data-slide-to="2"></li>
                     <li data-target="#carousel-example" data-slide-to="3"></li>
                 </ol>
-    
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="{{asset('images/app/background.gif')}}" class="d-block w-100" alt="slide-img-1">
