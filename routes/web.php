@@ -34,6 +34,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard', compact('products'));
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/bacon', function () {
+})->name('bacon');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/ham', function () {
+})->name('ham');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/sausages', function () {
+})->name('sausages');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/other-products', function () {
+})->name('other-products');
+
 // Products
 Route::resource('products', ProductController::class);
 
