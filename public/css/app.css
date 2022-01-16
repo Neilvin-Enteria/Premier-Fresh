@@ -6,6 +6,10 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
         
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
         *,
          ::before,
          ::after {
@@ -40,7 +44,6 @@
             -o-tab-size: 4;
             tab-size: 4;
             /* 3 */
-            font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             /* 4 */
         }
         /*
@@ -12660,12 +12663,14 @@ Ensure the default browser behavior of the `hidden` attribute.
         svg {
             color: #8C3DCE!important;
         }
-        
-        .home {
-            text-decoration: none;
+        /*
+        .home
+        {
+            text-decoration: underline;
             border-radius: 0;
-            color: black;
+            color: black;!important;
         }
+        */
         
         .carousel-indicators li {
             width: 10px;
@@ -12684,6 +12689,7 @@ Ensure the default browser behavior of the `hidden` attribute.
         .navbar {
             background-color: #fff;
             opacity: 0.7;
+            box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
         }
         
         .top-content {
@@ -12728,8 +12734,8 @@ Ensure the default browser behavior of the `hidden` attribute.
         
         .btn-cart {
             background-color: #000000;
-            border-radius: 20px;
-            width: 140px!important;
+            border-radius: 5px;
+            width: 190px!important;
         }
         
         .footer-link {
@@ -12791,7 +12797,7 @@ Ensure the default browser behavior of the `hidden` attribute.
         .form-control,
         .form-control:focus,
         .input-group-addon {
-            border-color: #e1e1e1;
+            border-color: #F5F5F5;
             border-radius: 5px;
         }
         
@@ -12856,7 +12862,7 @@ Ensure the default browser behavior of the `hidden` attribute.
         }
         
         .form-control:focus {
-            background: #e2e2e2;
+            background: #F5F5F5;
         }
         
         .signup-form .btn:hover,
@@ -12893,28 +12899,22 @@ Ensure the default browser behavior of the `hidden` attribute.
         }
         /* Login */
         
-        .psize {
-            margin-left: 8px;
-            background-color: #000000;
-            width: 12rem;
+        .container h1 {
+            font-family: Playfair Display;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
         
-        .fsize {
-            background-color: #000000;
-            width: 9rem;
-            margin-left: 9px;
+        .title-product h1 {
+            font-family: Playfair Display;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
         
-        .apbs {
+        s {
             font-size: .84rem;
         }
         
         .price {
             color: #000000
-        }
-        
-        .cardsize {
-            width: 12rem;
         }
         
         .column-other {
@@ -12980,11 +12980,6 @@ Ensure the default browser behavior of the `hidden` attribute.
         
         .google {
             margin-right: 10px;
-        }
-        
-        .container h1 {
-            font-family: Playfair Display;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
         /*Contact Us Modal*/
         
