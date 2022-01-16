@@ -63,6 +63,23 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/other-products', function
     return view('recipes.other-products', compact('others'));
 })->name('other-products');
 
+//Recipe
+Route::get('/recipe/bacon', function(){
+    return view('recipe.bacon-recipe');
+});
+
+Route::get('/recipe/ham', function(){
+    return view('recipe.ham-recipe');
+});
+
+Route::get('/recipe/other-products', function(){
+    return view('recipe.others-recipe');
+});
+
+Route::get('/recipe/sausages', function(){
+    return view('recipe.sausage-recipe');
+});
+
 // Products
 Route::resource('products', ProductController::class);
 

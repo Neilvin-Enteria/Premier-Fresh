@@ -44,9 +44,18 @@
 				          	<a class="dropdown-item" href="/other-products">OTHER PRODUCTS</a>
 			        	</div>
 			        </li>
-			      	<li class="nav-item border-right">
-			        	<a class="nav-link px-3 mx-2 recipes" href="#">RECIPES</a>
-			      	</li>
+					<li class="nav-item dropdown border-right">
+			        	<a class="nav-link px-3 mx-2 dropdown-toggle" href="recipes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+			        		RECIPES
+			        	</a>
+			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        		<a class="dropdown-item" href="/recipe/bacon">BACON</a>
+				          	<a class="dropdown-item" href="/recipe/ham">HAM</a>
+				          	<a class="dropdown-item" href="/recipe/sausages">SAUSAGES</a>
+				          	<div class="dropdown-divider"></div>
+				          	<a class="dropdown-item" href="/recipe/other-products">OTHER PRODUCTS</a>
+			        	</div>
+			        </li>
 			      	<li class="nav-item border-right">
 			        	<a class="nav-link px-3 mx-2 about" href="#">ABOUT</a>
 			     	</li>
