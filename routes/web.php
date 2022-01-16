@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginWithGoogleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,15 +36,31 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/bacon', function () {
+    $bacons = DB::table('products')
+    ->whereIn('product_type', ['Bacon'])
+    ->get();
+    return view('recipes.bacon', compact('bacons'));
 })->name('bacon');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/ham', function () {
+    $hams = DB::table('products')
+    ->whereIn('product_type', ['Ham'])
+    ->get();
+    return view('recipes.ham', compact('hams'));
 })->name('ham');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/sausages', function () {
+    $sausages = DB::table('products')
+    ->whereIn('product_type', ['Sausage'])
+    ->get();
+    return view('recipes.sausages', compact('sausages'));
 })->name('sausages');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/other-products', function () {
+    $others = DB::table('products')
+    ->whereIn('product_type', ['Other Products'])
+    ->get();
+    return view('recipes.other-products', compact('others'));
 })->name('other-products');
 
 // Products

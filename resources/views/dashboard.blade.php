@@ -31,18 +31,18 @@
                               <input class="form-control mr-md-2 mr-5 text-search" type="search" placeholder="Search..." aria-label="Search">
                         </form>
                         <li class="nav-item active border-right">
-                            <a class="nav-link px-3 mx-2 home" href="#">HOME<span class="sr-only">(current)</span></a>
+                            <a class="nav-link px-3 mx-2 home" href="/dashboard">HOME<span class="sr-only">(current)</span></a>
                           </li>
                           <li class="nav-item dropdown border-right">
                             <a class="nav-link px-3 mx-2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                 PRODUCTS
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">BACON</a>
-                                  <a class="dropdown-item" href="#">HAM</a>
-                                  <a class="dropdown-item" href="#">SAUSAGES</a>
+                                <a class="dropdown-item" href="/bacon">BACON</a>
+                                  <a class="dropdown-item" href="/ham">HAM</a>
+                                  <a class="dropdown-item" href="/sausages">SAUSAGES</a>
                                   <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#">OTHER PRODUCTS</a>
+                                  <a class="dropdown-item" href="/other-products">OTHER PRODUCTS</a>
                             </div>
                         </li>
                           <li class="nav-item border-right">
