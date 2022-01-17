@@ -57,7 +57,7 @@
 			        	</div>
 			        </li>
 			      	<li class="nav-item border-right">
-			        	<a class="nav-link px-3 mx-2 about" href="#">ABOUT</a>
+			        	<a class="nav-link px-3 mx-2 about" href="{{route('about-us-guest')}}">ABOUT</a>
 			     	</li>
                      <li class="nav-item pr-5">
                         <a class="nav-link px-3 mx-2 mr-5 trigger-btn contact" data-toggle="modal" href="#myModal">CONTACT</a>

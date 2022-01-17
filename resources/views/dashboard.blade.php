@@ -46,7 +46,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown border-right">
-                            <a class="nav-link px-3 mx-2 dropdown-toggle" href="recipes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link px-3 mx-1 dropdown-toggle" href="recipes.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                 RECIPES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,7 +58,7 @@
                             </div>
                         </li>
                           <li class="nav-item border-right">
-                            <a class="nav-link px-3 mx-2 about" href="#">ABOUT</a>
+                            <a class="nav-link px-3 mx-2 about" href="/about-us">ABOUT</a>
                          </li>
                           <li class="nav-item pr-5">
                             <a class="nav-link px-3 mx-2 mr-5 contact" href="#">CONTACT</a>

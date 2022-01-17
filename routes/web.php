@@ -34,6 +34,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/about-us', function () {
+    return view('about-us');
+})->name('about-us');
+
+Route::get('/about-us', function(){
+    return view('about-us');
+});
+
+Route::get('/about-us', function(){
+    return view('about-us-guest');
+})->name('about-us-guest');
+
 // Admin Dashboard
 Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
 Route::delete('/admin/user/{id}', [UserController::class, 'delete'])->name('user.delete');

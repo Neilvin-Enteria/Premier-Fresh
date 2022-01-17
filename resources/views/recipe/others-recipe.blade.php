@@ -31,7 +31,7 @@
 			      		<input class="form-control mr-md-2 mr-5 text-search" type="search" placeholder="Search..." aria-label="Search">
 				    </form>
 				    <li class="nav-item active border-right">
-			        	<a class="nav-link px-3 mx-2 home" href="#">HOME<span class="sr-only">(current)</span></a>
+			        	<a class="nav-link px-3 mx-2 home" href="/">HOME<span class="sr-only">(current)</span></a>
 			      	</li>
 			      	<li class="nav-item dropdown border-right">
 			        	<a class="nav-link px-3 mx-2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -58,7 +58,7 @@
 			        	</div>
 			        </li>
 			      	<li class="nav-item border-right">
-			        	<a class="nav-link px-3 mx-2 about" href="#">ABOUT</a>
+			        	<a class="nav-link px-3 mx-2 about" href="{{route('about-us-guest')}}">ABOUT</a>
 			     	</li>
                      <li class="nav-item pr-5">
                         <a class="nav-link px-3 mx-2 mr-5 trigger-btn contact" data-toggle="modal" href="#myModal">CONTACT</a>
@@ -79,6 +79,7 @@
 		</div>
 	</nav>
 	<!-- End Navigation Bar -->
+    
 
 <!-- Recipe for Bacon Products -->
 <div class="container my-5 py-1 title-product text-center">
