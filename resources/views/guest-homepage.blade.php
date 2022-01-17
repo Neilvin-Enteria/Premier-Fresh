@@ -403,7 +403,7 @@
 				        <li><a class="text-light footer-link" href="#">Bacon Bits</a></li>
 				        <li><a class="text-light footer-link" href="#">Bacon Chips</a></li>
 				        <li><a class="text-light footer-link" href="#">Bacon Honeycured</a></li>
-				        <li><a class="text-light footer-link" href="#">Bacon Regular</a></li>
+
 			      	</ul>
 			    </div>
 			    <div class="col-6 col-md">
