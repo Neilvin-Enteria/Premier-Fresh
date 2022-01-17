@@ -350,6 +350,32 @@
     </div>
     <!-- Contact Us Modal -->
 
+	    <!-- Products -->
+		<div class="container mt-5 my-5 py-5 title-product text-center">
+			<h1 class="container mt-1">PRODUCTS</h1>
+	
+			<!-- Products Display -->
+			<div class="row py-3 mx-0 text-center">
+				@foreach ($bacons as $bacon)
+					<div class="col">
+						<div class="card mt-3">
+							<img src="/storage/images/{{$bacon->product_image}}" class="card-img-top imagesizes" alt="...">
+							<div class="card-body">
+								<p class="card-title mb-2 h6 text-dark" style="font-size: 0.9rem;">{{$bacon->product_name}}</p>
+								<div class="row mb-1">
+									<div class="col text-dark">
+										<p class="card-text mb-0">&#8369; {{$bacon->product_price}}</p>
+									</div>  
+								</div>          
+							</div>
+						</div>
+					</div>
+				@endforeach
+			</div>
+		</div>
+	<!-- End of Products -->
+
+
 	<!-- Footer -->
 	<div class="container-fluid text-label" style="background-color: black;">
 		<footer class="container py-5 text-left" style="background-color: black;">

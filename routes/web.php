@@ -23,7 +23,16 @@ Route::get('/', function () {
     $products = DB::table('products')
         ->whereIn('product_id', ['3', '4', '5', '6'])
         ->get();
-    return view('guest-homepage', compact('products'));
+   $bacons = DB::table('products')
+    ->whereIn('product_type', ['Bacon'])
+    ->get();
+    $others = DB::table('products')
+    ->whereIn('product_type', ['Other Products'])
+    ->get();
+    $hams = DB::table('products')
+    ->whereIn('product_type', ['Ham'])
+    ->get();
+    return view('guest-homepage', compact('products', 'bacons'));
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
